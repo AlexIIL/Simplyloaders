@@ -287,6 +287,7 @@ public class TileEntityLoaderBase extends TileEntity implements ICapabilityProvi
 	    public void handleUpdateTag(NBTTagCompound tag) {
 	    	readFromNBT(tag);
 	    	setBlockState();
+	        world.markBlockRangeForRenderUpdate(pos, pos);
 	    }
 	    
 	    @Override
